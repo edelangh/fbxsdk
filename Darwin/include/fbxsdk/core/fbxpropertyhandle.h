@@ -389,7 +389,7 @@ public:
 		* \param pFBX_TYPE    Not used in this function. This is a dummy argument for 
 		*                     the correct instantiation of the templated function.
 		* \return The minimum value of this property */
-		template <class T> inline T GetMin(const T* pFBX_TYPE) const { T lValue; GetMin(&lValue, FbxTypeOf(lValue)); return lValue; }
+		template <class T> inline T GetMin(const T* pFBX_TYPE) const {(void)pFBX_TYPE; T lValue; GetMin(&lValue, FbxTypeOf(lValue)); return lValue; }
 
 		/** Judge if this property has soft minimum value.
 		* \return If the soft minimum value exist, return true,otherwise, return false. */
@@ -416,7 +416,7 @@ public:
 		* \param pFBX_TYPE    Not used in this function. This is a dummy argument for 
 		*                     the correct instantiation of the templated function.
 		* \return The soft minimum value of this property */
-		template <class T> inline T GetSoftMin(const T* pFBX_TYPE) const { T lValue; GetSoftMin(&lValue, FbxTypeOf(lValue)); return lValue; }
+		template <class T> inline T GetSoftMin(const T* pFBX_TYPE) const { (void)pFBX_TYPE;T lValue; GetSoftMin(&lValue, FbxTypeOf(lValue)); return lValue; }
 
 		/** Judge if this property has maximum value.
 		* \return If the maximum value exist, return true,otherwise, return false. */
@@ -443,7 +443,7 @@ public:
 		* \param pFBX_TYPE    Not used in this function. This is a dummy argument for 
 		*                     the correct instantiation of the templated function.
 		* \return The maximum value of this property */
-		template <class T> inline T GetMax(const T* pFBX_TYPE) const { T lValue; GetMax(&lValue, FbxTypeOf(lValue)); return lValue; }
+		template <class T> inline T GetMax(const T* pFBX_TYPE) const {(void) pFBX_TYPE;T lValue; GetMax(&lValue, FbxTypeOf(lValue)); return lValue; }
 
 		/** Judge if this property has soft maximum value.
 		* \return If the soft maximum value exist, return true,otherwise, return false. */
@@ -470,7 +470,7 @@ public:
 		* \param pFBX_TYPE    Not used in this function. This is a dummy argument for 
 		*                     the correct instantiation of the templated function.
 		* \return The soft maximum value of this property */
-		template <class T> inline T GetSoftMax(const T* pFBX_TYPE) const { T lValue; GetSoftMax(&lValue, FbxTypeOf(lValue)); return lValue; }
+		template <class T> inline T GetSoftMax(const T* pFBX_TYPE) const { (void)pFBX_TYPE;T lValue; GetSoftMax(&lValue, FbxTypeOf(lValue)); return lValue; }
 	//@}
 
 	/**
@@ -515,7 +515,7 @@ public:
 		/** get property value.
 		* \param pFBX_TYPE  Not be used.
 		* \return The gotten property value. */
-		template <class T> inline T Get(const T* pFBX_TYPE) const { T lValue; Get(&lValue, FbxTypeOf(lValue)); return lValue; }
+		template <class T> inline T Get(const T* pFBX_TYPE) const {(void)pFBX_TYPE; T lValue; Get(&lValue, FbxTypeOf(lValue)); return lValue; }
 	//@}
 
 	/**

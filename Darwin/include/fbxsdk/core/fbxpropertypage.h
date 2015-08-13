@@ -1206,7 +1206,7 @@ public:
 
     // useful set and get functions
     template <class T> inline bool  Set( FbxInt pId, const T& pValue )    { return Set( pId,&pValue,FbxTypeOf(pValue),true ); }
-    template <class T> inline T     Get( FbxInt pId, const T* pFBX_TYPE)  { T lValue; Get( pId,&lValue,FbxTypeOf(lValue) ); return lValue; }
+    template <class T> inline T     Get( FbxInt pId, const T* pFBX_TYPE)  { (void)pFBX_TYPE;T lValue; Get( pId,&lValue,FbxTypeOf(lValue) ); return lValue; }
 
 
 	void    SetDataPtr(void* pDataPtr)  { mDataPtr = pDataPtr; }

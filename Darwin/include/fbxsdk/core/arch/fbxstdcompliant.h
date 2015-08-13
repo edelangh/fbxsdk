@@ -47,9 +47,9 @@
 #elif defined(FBXSDK_ENV_MAC) || defined(FBXSDK_ENV_LINUX)
 	#define FBXSDK_printf							printf
 	#define FBXSDK_fprintf							fprintf
-	inline int FBXSDK_sprintf(char* dst, size_t dstsize, const char* format, ...){ va_list vl; va_start(vl, format); int ret = vsprintf(dst, format, vl); va_end(vl); return ret; }
-	inline int FBXSDK_snprintf(char* dst, size_t dstsize, const char* format, ...){ va_list vl; va_start(vl, format); int ret = vsnprintf(dst, dstsize, format, vl); va_end(vl); return ret; }
-	inline int FBXSDK_vsprintf(char* dst, size_t dstsize, const char* format, va_list vl){ return vsprintf(dst, format, vl); }
+	inline int FBXSDK_sprintf(char* dst, const char* format, ...){ va_list vl; va_start(vl, format); int ret = vsprintf(dst, format, vl); va_end(vl); return ret; }
+	inline int FBXSDK_snprintf(char* dst, const char* format, ...){ va_list vl; va_start(vl, format); int ret = vsnprintf(dst, 0, format, vl); va_end(vl); return ret; }
+	inline int FBXSDK_vsprintf(char* dst, size_t dstsize, const char* format, va_list vl){ (void)dstsize; return vsprintf(dst, format, vl); }
 	inline int FBXSDK_vsnprintf(char* dst, size_t dstsize, const char* format, va_list vl){ return vsnprintf(dst, dstsize, format, vl); }
 	#define FBXSDK_stricmp(dst, src)				stricmp(dst, src)
 	#define FBXSDK_strnicmp(dst, src, count)		strnicmp(dst, src, count)

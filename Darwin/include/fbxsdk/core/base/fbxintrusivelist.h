@@ -252,7 +252,7 @@ private:
 
     // Not copyable
     FbxIntrusiveList(const FbxIntrusiveList&);
-    FbxIntrusiveList& operator=(const FbxIntrusiveList& Right){return (*this);}
+    FbxIntrusiveList& operator=(const FbxIntrusiveList& Right){(void)Right; return (*this);}
 };
 
 #endif /* !DOXYGEN_SHOULD_SKIP_THIS *****************************************************************************************/
