@@ -398,7 +398,7 @@ private:
 
 
 	// not implemented yet!
-	FbxHashMap( const FbxHashMap& pOther ) {};
+	FbxHashMap( const FbxHashMap& pOther ) {(void)pOther;};
 
 	FbxArray<ListItem*> mBuckets;
 	HashFunctorType mHashFunctor;

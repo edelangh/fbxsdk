@@ -144,6 +144,8 @@ public:
 		  */
 		template <typename T1,typename T2> inline FbxClassId OverrideFbxClass(const T1* pFBX_TYPE_Class, const T2* pFBX_TYPE_OverridenClass)
 		{
+			(void)pFBX_TYPE_Class;
+			(void)pFBX_TYPE_OverridenClass;
 			T1::ClassId  = Internal_OverrideFbxClass(T2::ClassId,(FbxObjectCreateProc)T1::Allocate );
 			return T1::ClassId;
 		}
@@ -176,6 +178,7 @@ public:
 		  */
 		template <typename T> inline void UnregisterFbxClass(const T* pFBX_TYPE_Class)
 		{
+			(void)pFBX_TYPE_Class;
 			Internal_UnregisterFbxClass(T::ClassId);
 			T::ClassId = FbxClassId();
 		}
